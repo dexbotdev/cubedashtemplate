@@ -3,29 +3,20 @@ import { Typography } from "antd";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Typography.Title)`
   && {
-    color: #D5D5DE;
+    color: #43436B;
+    fontSize:16px !important;
     &:hover {
       color: #7A77FF;
     }
   }
 `
-
-const StyledDash = styled.span`
-  color: #D5D5DE;
-`
+ 
 
 const ExploreTitle = ({ itemTitle }) => (
-  <Typography.Title level={4}>
-    { itemTitle ?
-    (
-      <span>
-        <StyledLink to="/">Dashboard</StyledLink>
-        <StyledDash> — </StyledDash>
-        {itemTitle}
-     </span>
-    ) : "Explore" }
+  <Typography.Title level={4}>  
+        Dashboard 
   </Typography.Title>
 );
 

@@ -40,23 +40,14 @@ const ExplorePage = withRouter(({ history, location }) => {
   }
 
   return (
-    <div>
-      <TitleModal
-        history={history}
-        itemId={itemId}
-        titleModalVisible={titleModalVisible}
-        setTitleModalVisible={setTitleModalVisible}
-        setAddingToDashboard={setAddingToDashboard}
-        finalVizState={finalVizState}
-        setTitle={setTitle}
-        finalTitle={finalTitle}
-      />
+    <div> 
       <PageHeader
         title={<ExploreTitle itemId={itemId} />}
         button={
           <Button
             key="button"
-            type="primary"
+            size="default"
+            type="submit"
             loading={addingToDashboard}
             disabled={!isQueryPresent(finalVizState.query || {})}
             onClick={() => setTitleModalVisible(true)}
@@ -64,11 +55,7 @@ const ExplorePage = withRouter(({ history, location }) => {
             {itemId ? "Update" : "Add to Dashboard"}
           </Button>
         }
-      />
-      <ExploreQueryBuilder
-        vizState={finalVizState}
-        setVizState={setVizState}
-      />
+      /> 
     </div>
   );
 });

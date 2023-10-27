@@ -7,6 +7,7 @@ import ChartRenderer from "../components/ChartRenderer";
 import Dashboard from "../components/Dashboard";
 import DashboardItem from "../components/DashboardItem";
 import PageHeader from "../components/PageHeader";
+import ExploreTitle from "../components/ExploreTitle.js";
 
 const deserializeItem = i => ({
   ...i,
@@ -67,16 +68,13 @@ const DashboardPage = () => {
   return !data || data.dashboardItems.length ? (
     <div>
       <PageHeader
-        title={<Typography.Title level={4}>Dashboard</Typography.Title>}
+        title={<ExploreTitle itemId={'DashBoard'} />}
         button={<Link to="/explore">
-          <Button type="primary">
-            Add chart
+          <Button type="primary" size="default">
+            Add Pair
           </Button>
         </Link>}
-      />
-      <Dashboard dashboardItems={data && data.dashboardItems}>
-        {data && data.dashboardItems.map(deserializeItem).map(dashboardItem)}
-      </Dashboard>
+      /> 
     </div>
   ) : <Empty />;
 };

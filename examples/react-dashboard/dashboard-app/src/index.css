@@ -1,5 +1,10 @@
 
 @import '~antd/dist/antd.css';
 body {
-  background-color: #f0f2f5 !important;
+  background-color: #f3f6fb !important;
+}
+.ant-layout-content {
+  flex: auto;
+  min-height: 0;
+  background-color: #f3f6fb !important;
 }

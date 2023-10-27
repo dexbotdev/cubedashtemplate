@@ -8,7 +8,7 @@ import createExampleWrapper from "@cube-dev/example-wrapper";
 import ExplorePage from "./pages/ExplorePage";
 import DashboardPage from "./pages/DashboardPage";
 
-createExampleWrapper({ title: "React Dashboard" });
+//createExampleWrapper({ title: "React Dashboard" });
 
 ReactDOM.render(
   <Router>

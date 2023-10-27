@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const StyledHeader = styled(Layout.Header)`
-  padding: 0 28px
+  padding: 0 20px
+  width: 80rem
 `
 
 const StyledMenu = styled(Menu)`
@@ -44,11 +45,17 @@ const MenuItemStyled = styled(Menu.Item)`
 `
 
 const Header = ({ location }) => (
+
+  <div style={{display:'flex', background:'#43436B'}}>   
+   <img  width="150px" height={'39px'} style={{"paddingLeft":"25px","paddingTop":"10px"}} src="images/logo/logo.png" />
+
   <StyledHeader >
-    <StyledMenu
+    
+      <StyledMenu
       mode="horizontal"
       selectedKeys={[location.pathname]}
-    >
+    >   
+       
       <MenuItemStyled key="/explore">
         <Link to="/explore">Explore</Link>
       </MenuItemStyled>
@@ -57,6 +64,7 @@ const Header = ({ location }) => (
       </MenuItemStyled>
     </StyledMenu>
   </StyledHeader>
+  </div>
 );
 
 export default Header;
